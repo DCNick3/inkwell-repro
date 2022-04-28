@@ -1,0 +1,14 @@
+[package]
+name = "inkwell-repro"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+debug = true
+lto = "thin"
+
+[dependencies.inkwell]
+git = "https://github.com/TheDan64/inkwell.git"
+rev = "83c81336b19b7180b55724a46656f84260203212"
+features = ["llvm13-0", "target-all"]
